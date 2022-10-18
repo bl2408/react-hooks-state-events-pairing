@@ -2,10 +2,20 @@
 import Comment from "./Comment";
 
 function CommentsSection({
-    commentsList
+    commentsList,
+    updateCommentVotes
 }){
     
-    const displayComments = commentsList.map(comment=><Comment key={comment.id} user={comment.user} comment={comment.comment}/>);
+    const displayComments = commentsList.map(comment=>{
+        return <Comment 
+                    key={comment.id}
+                    id={comment.id}
+                    user={comment.user} 
+                    comment={comment.comment}
+                    votes={comment.votes}
+                    updateCommentVotes={updateCommentVotes}
+                />
+    });
 
     return (
         <>

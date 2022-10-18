@@ -1,0 +1,17 @@
+.comment {
+    display: grid;
+    grid-template-columns: 0.5fr 2fr 1fr;
+    padding: 20px;
+    box-sizing: border-box;
+}
+.comment:nth-child(odd){
+    background-color: rgba(0, 0, 0, 0.1);
+}
+.comment > :nth-child(2) {
+    text-align: left;
+}
+
+.comment > :nth-child(1) {
+    font-weight: bold;
+    text-align: left;
+}

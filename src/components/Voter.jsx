@@ -1,6 +1,6 @@
 function Voter({
     votes,
-    setVotes
+    fnSetVotes = ()=>{},
 }){
 
     function onVote(up){
@@ -12,7 +12,7 @@ function Voter({
 
             [key]: votes[key] + 1
         }
-        setVotes(voteObj);
+        fnSetVotes(voteObj);
     }
 
     return(

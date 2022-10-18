@@ -1,13 +1,30 @@
+import Voter from "./Voter";
+
 function Comment({
+    id,
     user,
-    comment
+    comment,
+    votes,
+    updateCommentVotes
 }){
 
+    const setVotes =(voteObj)=>{
+        updateCommentVotes(id, voteObj);
+    };
+
     return (
-        <>
-            <h2>{user}</h2>
-            <p>{comment}</p>
-        </>
+        <div className="comment">
+            <div>
+                {user}
+            </div>
+            <div>
+                {comment}
+            </div>
+            <div>
+                <Voter votes={votes} fnSetVotes={setVotes}/>
+            </div>
+            
+        </div>
     );
 
 }
