@@ -27,9 +27,9 @@ function CommentsSection({
 
     return (
         <>
-            <h1>{commentsList.length} Comment(s)</h1>
+            <h1>{displayComments.length} Comment(s)</h1>
             <div className="searchbar">
-                <input type="text" name="inputSearch" value={search} onChange={handleOnChange}/>
+                <input type="text" name="inputSearch" placeholder="Enter username" value={search} onChange={handleOnChange}/>
             </div>
             {displayComments}
         </>
